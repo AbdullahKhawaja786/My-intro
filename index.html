@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abdullah Khawaja | Backend Developer</title>
+<meta name="description" content="Backend developer building APIs and backend systems in Node.js, PostgreSQL, and C++. CS student at FAST NUCES Lahore.">
+<meta property="og:title" content="Abdullah Khawaja | Backend Developer">
+<meta property="og:description" content="Backend developer building APIs and backend systems in Node.js, PostgreSQL, and C++. CS student at FAST NUCES Lahore.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://abdullahkhawaja.vercel.app">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2303020a'/><text x='16' y='22' text-anchor='middle' font-family='monospace' font-size='14' font-weight='bold' fill='%2367e8f9'>AK</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Muhammad Abdullah Khawaja",
+  "url": "https://abdullahkhawaja.vercel.app",
+  "jobTitle": "Backend Developer",
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "FAST NUCES Lahore" },
+  "knowsAbout": ["C++", "Node.js", "Express", "MongoDB", "PostgreSQL", "Supabase", "Docker", "REST APIs", "React", "SFML"]
+}
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+<div id="loader" aria-live="polite" aria-label="Loading portfolio">
+  <div class="loader-orbit">
+    <div class="loader-core"></div>
+    <div class="loader-ring"></div>
+    <div class="loader-ring loader-ring-2"></div>
+  </div>
+  <span class="loader-text">Loading</span>
+</div>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<canvas id="galaxy-canvas" aria-hidden="true"></canvas>
+
+<nav role="navigation" aria-label="Main navigation">
+  <a href="#hero" class="nav-logo" aria-label="Abdullah Khawaja, back to top">
+    <img src="logo.png" alt="" class="nav-logo-mark" width="28" height="16">
+    <span>AK.dev</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#github">GitHub</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-resume">Resume ↗</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#github">GitHub</a>
+  <a href="#experience">Experience</a>
+  <a href="#contact">Contact</a>
+  <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume ↗</a>
+</div>
+
+<main id="main-content">
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-photo">
+      <img src="photo.png" alt="Abdullah Khawaja" width="120" height="120">
+    </div>
+    <h1 class="hero-name">Abdullah<br><span>Khawaja</span></h1>
+    <p class="hero-role">Backend Developer, building APIs &amp; backend systems</p>
+    <p class="hero-role-sub">CS Student @ FAST NUCES Lahore</p>
+    <div class="hero-claim">
+      <span>6 Projects</span>
+      <span class="claim-dot">•</span>
+      <span>2 Internships</span>
+      <span class="claim-dot">•</span>
+      <span>Backend Developer</span>
+    </div>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">View My Work</a>
+      <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-ghost">Resume ↗</a>
+      <a href="#contact" class="btn-ghost">Let's Connect</a>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll to explore</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <div class="section-panel panel-bg">
+  <section id="about">
+    <div class="about-content">
+      <p class="about-label">About Me</p>
+      <h2 class="about-heading reveal">Second-year CS student focused on backend systems.</h2>
+      <p class="about-text reveal">I picked up programming in my first year at FAST NUCES and gravitated toward backend development. I've since completed two internships, built projects in C++, Node.js, and React/Supabase, and started exploring how AI connects to backend infrastructure.</p>
+      <p class="about-text reveal">Currently interning at FlyRank AI as a Backend Developer, working through real assignments on APIs, containerized databases, and scraping pipelines. Previously interned at Syntecxhub, building REST APIs with Node.js and MongoDB.</p>
+      <div class="about-stats reveal">
+        <div class="stat">
+          <div class="stat-num">6</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">2</div>
+          <div class="stat-label">Internships</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" id="stat-gh-repos">···</div>
+          <div class="stat-label">GitHub Repos</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" id="stat-gh-langs">···</div>
+          <div class="stat-label">Languages Used</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-visual reveal">
+      <div class="about-photo-ring"></div>
+      <div class="about-photo">
+        <img src="photo.png" alt="Abdullah Khawaja" width="280" height="280">
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section-panel">
+    <div class="section-header reveal">
+      <p class="section-label">Education</p>
+      <h2 class="section-title">Academic Background</h2>
+    </div>
+    <div class="edu-list">
+      <div class="edu-item reveal">
+        <div class="edu-meta">
+          <div class="edu-date">2025 to 2029 (Expected)</div>
+          <div class="edu-school">FAST NUCES</div>
+          <span class="edu-badge">Current</span>
+        </div>
+        <div class="edu-body">
+          <div class="edu-degree">BS Computer Science</div>
+          <p class="edu-desc">Located in Lahore, Pakistan. Focusing on software engineering fundamentals, data structures, and backend systems.</p>
+          <div class="edu-coursework">
+            <span class="coursework-tag">Data Structures</span>
+            <span class="coursework-tag">OOP</span>
+            <span class="coursework-tag">Database Systems</span>
+            <span class="coursework-tag">Discrete Math</span>
+            <span class="coursework-tag">Web Development</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section-panel">
+    <div class="section-header reveal">
+      <p class="section-label">Technical Skills</p>
+      <h2 class="section-title">What I Work With</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-category reveal">
+        <div class="skill-cat-label">Languages</div>
+        <div class="skill-tags">
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">SQL</span>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <div class="skill-cat-label">Frameworks & Runtime</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Express.js</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">SFML</span>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <div class="skill-cat-label">Databases</div>
+        <div class="skill-tags">
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">Supabase</span>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <div class="skill-cat-label">Tools</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Postman</span>
+          <span class="skill-tag">VS Code</span>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <div class="skill-cat-label">Exploring</div>
+        <div class="skill-tags">
+          <span class="skill-tag exploring">RAG Pipelines</span>
+          <span class="skill-tag exploring">Python</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <div class="section-panel panel-bg">
+  <section id="projects">
+    <div class="section-header reveal">
+      <p class="section-label">Selected Work</p>
+      <h2 class="section-title">Things I've Built</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="project-num">01 / 06</div>
+        <h3 class="project-title">X-Fitness GMS</h3>
+        <p class="project-desc">A gym management SaaS built for a real gym in Johar Town, Lahore. React/Vite frontend with Supabase as the backend, RLS-enforced tables for attendance, payments, and audit logs, a trainer payroll page, and a live analytics dashboard.</p>
+        <p class="project-stack-label">Stack</p>
+        <div class="project-tags">
+          <span class="tag">React</span>
+          <span class="tag">Vite</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">RLS</span>
+        </div>
+        <p class="project-takeaway">First time shipping something a real business actually uses, learned to design row-level security policies instead of trusting the frontend.</p>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-num">02 / 06</div>
+        <h3 class="project-title">Task API (Dockerized Postgres)</h3>
+        <p class="project-desc">A REST API for managing a to-do list, evolved from in-memory storage to SQLite to a real PostgreSQL database running in Docker, with Supabase Auth guarding protected routes via verified JWTs.</p>
+        <p class="project-stack-label">Stack</p>
+        <div class="project-tags">
+          <span class="tag">Node.js</span>
+          <span class="tag">Docker</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Supabase Auth</span>
+        </div>
+        <p class="project-takeaway">FlyRank internship, learned how storage choices ripple through an API, and how to verify bearer tokens with a real Identity Provider instead of rolling my own auth.</p>
+        <a href="https://github.com/AbdullahKhawaja786/todo-crud-api" class="project-link">View Repo →</a>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-num">03 / 06</div>
+        <h3 class="project-title">User Authentication System</h3>
+        <p class="project-desc">A standalone authentication system built with Node.js and MongoDB: signup, login, and session handling with password hashing and validated input on every route.</p>
+        <p class="project-stack-label">Stack</p>
+        <div class="project-tags">
+          <span class="tag">Node.js</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">Auth</span>
+        </div>
+        <p class="project-takeaway">Built during the Syntecxhub internship, before diving into the Supabase Auth work on the FlyRank track, this is where I first worked through how login sessions and password security actually fit together.</p>
+        <a href="https://github.com/AbdullahKhawaja786/syntacx_hub_User-Authentication-System" class="project-link">View Repo →</a>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-num">04 / 06</div>
+        <h3 class="project-title">User CRUD API</h3>
+        <p class="project-desc">REST API built with Node.js, Express, and MongoDB. Implements CRUD operations, Mongoose schema validation, input sanitization, and structured error responses.</p>
+        <p class="project-stack-label">Stack</p>
+        <div class="project-tags">
+          <span class="tag">Node.js</span>
+          <span class="tag">Express</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">REST</span>
+        </div>
+        <p class="project-takeaway">Built during Syntecxhub internship, learned schema design, middleware patterns, and how to structure error responses in a real API.</p>
+        <a href="https://github.com/AbdullahKhawaja786/Syntecxhub_User-CRUD-API_Project-1" class="project-link">View Repo →</a>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-num">05 / 06</div>
+        <h3 class="project-title">MediCore HMS</h3>
+        <p class="project-desc">Hospital management system in C++ with SFML-based GUI. Uses template classes, operator overloading, and file-based data persistence for patient and appointment records.</p>
+        <p class="project-stack-label">Stack</p>
+        <div class="project-tags">
+          <span class="tag">C++</span>
+          <span class="tag">SFML</span>
+          <span class="tag">OOP</span>
+          <span class="tag">File I/O</span>
+        </div>
+        <p class="project-takeaway">Academic project, applied OOP design patterns to manage complex data relationships without a database layer.</p>
+        <a href="https://github.com/AbdullahKhawaja786/medicore-hms" class="project-link">View Repo →</a>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-num">06 / 06</div>
+        <h3 class="project-title">Brick Breaker</h3>
+        <p class="project-desc">Arcade game in C++ with a fixed-timestep game loop, AABB collision detection, and level state management.</p>
+        <p class="project-stack-label">Stack</p>
+        <div class="project-tags">
+          <span class="tag">C++</span>
+          <span class="tag">Game Dev</span>
+          <span class="tag">Physics</span>
+        </div>
+        <p class="project-takeaway">Built to understand real-time rendering, frame-independent physics, and state machines in C++.</p>
+        <a href="https://github.com/AbdullahKhawaja786/brick-breaker" class="project-link">View Repo →</a>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <!-- GITHUB -->
+  <section id="github" class="section-panel">
+    <div class="section-header reveal">
+      <p class="section-label">Open Source</p>
+      <h2 class="section-title">On GitHub</h2>
+    </div>
+    <div class="github-card reveal">
+      <div class="github-avatar">
+        <img id="github-avatar-img" alt="Abdullah Khawaja GitHub profile picture" loading="lazy" width="72" height="72">
+        <span id="github-avatar-fallback">AK</span>
+      </div>
+      <div class="github-handle">@AbdullahKhawaja786</div>
+      <p class="github-bio">Backend development in C++ and Node.js. Learning AI/LLM integrations.</p>
+      <div class="github-stats-row">
+        <div class="gh-stat">
+          <span class="gh-stat-num" id="gh-repo-count">···</span>
+          <span class="gh-stat-label">Repositories</span>
+        </div>
+        <div class="gh-stat">
+          <span class="gh-stat-num" id="gh-lang-count">···</span>
+          <span class="gh-stat-label">Languages</span>
+        </div>
+      </div>
+      <div class="github-repos" id="github-repos-list">
+        <div class="github-repo-item">
+          <span class="github-repo-name">user-crud-api</span>
+          <span class="github-repo-lang">JavaScript</span>
+        </div>
+        <div class="github-repo-item">
+          <span class="github-repo-name">medicore-hms</span>
+          <span class="github-repo-lang">C++</span>
+        </div>
+        <div class="github-repo-item">
+          <span class="github-repo-name">brick-breaker</span>
+          <span class="github-repo-lang">C++</span>
+        </div>
+      </div>
+      <a href="https://github.com/AbdullahKhawaja786" target="_blank" rel="noopener noreferrer" class="btn-primary">View GitHub Profile</a>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section-panel">
+    <div class="section-header reveal">
+      <p class="section-label">Experience</p>
+      <h2 class="section-title">Where I've Worked</h2>
+    </div>
+    <div class="exp-list">
+      <div class="exp-item reveal">
+        <div class="exp-meta">
+          <div class="exp-date">Jul 2026 to Present</div>
+          <div class="exp-company">FlyRank AI</div>
+          <span class="exp-badge">Current</span>
+        </div>
+        <div class="exp-body">
+          <div class="exp-role">Backend Developer Intern</div>
+          <ul class="exp-bullets">
+            <li>Built Supabase Auth flows with JWT verification and protected middleware routes</li>
+            <li>Containerized a PostgreSQL REST API with Docker and Docker Compose</li>
+            <li>Built a polite, schema-validated web scraper with retry logic and run reports</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-meta">
+          <div class="exp-date">Jun 2026 to Jul 2026</div>
+          <div class="exp-company">Syntecxhub</div>
+          <span class="exp-badge" style="color:#9ca3af;border-color:rgba(156,163,175,0.25);">Past</span>
+        </div>
+        <div class="exp-body">
+          <div class="exp-role">Backend Developer Intern (Virtual)</div>
+          <ul class="exp-bullets">
+            <li>Built a REST API with Node.js, Express, and MongoDB</li>
+            <li>Implemented full CRUD operations with Mongoose schema validation</li>
+            <li>Designed structured error handling and input sanitization across routes</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-meta">
+          <div class="exp-date">Apr 2026</div>
+          <div class="exp-company">SOFTEC'26</div>
+          <span class="exp-badge" style="color:#86efac;border-color:rgba(134,239,172,0.25);">Volunteer</span>
+        </div>
+        <div class="exp-body">
+          <div class="exp-role">Reception Officer</div>
+          <ul class="exp-bullets">
+            <li>Managed participant registration for 1000+ attendees</li>
+            <li>Coordinated on-ground logistics across a multi-day event</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <div class="section-panel panel-bg">
+  <section id="contact">
+    <h2 class="contact-heading reveal">Let's Build<br><span>Together</span></h2>
+    <p class="contact-sub reveal">Open to backend roles, internships, and collaborations. If you're working on something interesting, or just want to talk tech, reach out.</p>
+    <div class="contact-links reveal">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abdullahakhawaja786@gmail.com" target="_blank" rel="noopener noreferrer" class="contact-link">✉ Email</a>
+      <a href="https://linkedin.com/in/abdullahkhawaja786" target="_blank" rel="noopener noreferrer" class="contact-link">in LinkedIn</a>
+      <a href="https://github.com/AbdullahKhawaja786" target="_blank" rel="noopener noreferrer" class="contact-link">⌥ GitHub</a>
+    </div>
+  </section>
+  </div>
+
+</main>
+
+<footer>
+  <span>© <span id="year"></span> Muhammad Abdullah Khawaja &nbsp;·&nbsp; Built from scratch &nbsp;·&nbsp; Lahore, Pakistan</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
