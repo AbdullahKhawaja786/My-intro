@@ -104,7 +104,7 @@ var camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHei
 camera.position.set(0, 3, 8);
 
 var params = {
-  count: window.innerWidth < 768 ? 30000 : 60000,
+  count: window.innerWidth < 768 ? 22000 : 46000,
   radius: 6,
   branches: 5,
   spin: 1.2,
@@ -154,8 +154,10 @@ function buildGalaxy() {
   galaxyGeo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
   galaxyMat = new THREE.PointsMaterial({
-    size: 0.02,
+    size: 0.019,
     sizeAttenuation: true,
+    transparent: true,
+    opacity: 0.7,
     depthWrite: false,
     blending: THREE.AdditiveBlending,
     vertexColors: true
@@ -329,53 +331,20 @@ if (loaderEl) { loaderEl.classList.add('hidden'); }
 
 /* ── GITHUB LIVE STATS ── */
 (function() {
-  var ghUser = 'AbdullahKhawaja786';
   var repoCountEl = document.getElementById('gh-repo-count');
   var langCountEl = document.getElementById('gh-lang-count');
   var reposListEl = document.getElementById('github-repos-list');
   var aboutRepoEl = document.getElementById('stat-gh-repos');
   var aboutLangEl = document.getElementById('stat-gh-langs');
-  var avatarWrapEl = document.querySelector('.github-avatar');
-  var avatarImgEl = document.getElementById('github-avatar-img');
-  var avatarFallbackEl = document.getElementById('github-avatar-fallback');
 
   if (!repoCountEl) return;
 
-  var userReq = fetch('https://api.github.com/users/' + ghUser)
+  fetch('https://api.github.com/users/AbdullahKhawaja786/repos?per_page=100')
     .then(function(res) {
-      if (!res.ok) throw new Error('GitHub user API error');
+      if (!res.ok) throw new Error('GitHub API error');
       return res.json();
-    });
-
-  var reposReq = fetch('https://api.github.com/users/' + ghUser + '/repos?per_page=100')
-    .then(function(res) {
-      if (!res.ok) throw new Error('GitHub repos API error');
-      return res.json();
-    });
-
-  Promise.all([userReq, reposReq])
-    .then(function(results) {
-      var profile = results[0];
-      var repos = results[1];
-
-      if (avatarWrapEl && avatarImgEl && profile && profile.avatar_url) {
-        avatarImgEl.addEventListener('load', function() {
-          avatarWrapEl.classList.add('has-image');
-        });
-        avatarImgEl.addEventListener('error', function() {
-          avatarWrapEl.classList.remove('has-image');
-        });
-        avatarImgEl.referrerPolicy = 'no-referrer';
-        avatarImgEl.src = profile.avatar_url;
-
-        // If the image is already cached, load may have fired before listeners.
-        if (avatarImgEl.complete && avatarImgEl.naturalWidth > 0) {
-          avatarWrapEl.classList.add('has-image');
-        }
-      } else if (avatarWrapEl && avatarFallbackEl) {
-        avatarWrapEl.classList.remove('has-image');
-      }
-
+    })
+    .then(function(repos) {
       var nonForks = repos.filter(function(r) { return !r.fork; });
       repoCountEl.textContent = nonForks.length;
       if (aboutRepoEl) aboutRepoEl.textContent = nonForks.length;
@@ -417,6 +386,5 @@ if (loaderEl) { loaderEl.classList.add('hidden'); }
       langCountEl.textContent = 'N/A';
       if (aboutRepoEl) aboutRepoEl.textContent = 'N/A';
       if (aboutLangEl) aboutLangEl.textContent = 'N/A';
-      if (avatarWrapEl) avatarWrapEl.classList.remove('has-image');
     });
 })();

@@ -816,22 +816,12 @@ section {
   color: var(--star-white);
   margin: 0 auto 16px;
   overflow: hidden;
-  position: relative;
 }
 .github-avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: none;
-}
-.github-avatar.has-image img {
   display: block;
-}
-.github-avatar span {
-  display: block;
-}
-.github-avatar.has-image span {
-  display: none;
 }
 .github-handle {
   font-family: var(--font-mono);
